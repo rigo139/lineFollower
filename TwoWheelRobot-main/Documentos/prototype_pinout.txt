@@ -1,0 +1,25 @@
+Ponte H (TB6612FNG):
+	AIN1 	= BIN1 = LOW
+	AIN2 	= BIN2 = HIGH
+	PMWA	= GPIO1
+	PMWB	= GPIO3
+	STDBY 	= Open
+	GND		= GND
+	VM		= Bat+
+	VCC		= 3v3
+	AO1		= MotorA+
+	AO2		= MotorA-
+	BO1		= MotorB+
+	BO2		= MotorB-
+	
+ADS1015:
+	SDA		= GPIO0
+	SCL		= GPIO2
+	Addr	= 1 LOW e outro HIGH
+	VCC		= 3v3
+	GND		= GND
+
+QTR:
+	IR		= HIGH
+	GND		= GND
+	VCC		= 3v3

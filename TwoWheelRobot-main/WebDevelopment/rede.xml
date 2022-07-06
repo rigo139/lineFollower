@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<response>
+<wifi>
+	<ssid>Rede Aba</ssid>
+	<rssi>-30</rssi>
+	<encr>0</encr>
+</wifi>
+<wifi>
+	<ssid>Rede B</ssid>
+	<rssi>-30</rssi>
+	<encr>1</encr>
+</wifi>
+
+<wifi>
+	<ssid>Rede C</ssid>
+	<rssi>-60</rssi>
+	<encr>0</encr>
+</wifi>
+<wifi>
+	<ssid>Rede D</ssid>
+	<rssi>-60</rssi>
+	<encr>1</encr>
+</wifi>
+
+<wifi>
+	<ssid>Rede E</ssid>
+	<rssi>-80</rssi>
+	<encr>0</encr>
+</wifi>
+<wifi>
+	<ssid>Rede F</ssid>
+	<rssi>-80</rssi>
+	<encr>1</encr>
+</wifi>
+
+<wifi>
+	<ssid>Rede G</ssid>
+	<rssi>-100</rssi>
+	<encr>0</encr>
+</wifi>
+<wifi>
+	<ssid>Rede H</ssid>
+	<rssi>-100</rssi>
+	<encr>1</encr>
+</wifi>
+</response>

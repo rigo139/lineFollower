@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./JS/script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon"/>
+    </head>
+    <body>
+        <!--Menu superior-->
+        <header class="menu">
+            <main>
+                <div class="header1">
+                    <div class="logo">
+                        <img src="./imagens/logo.png" alt="logo">
+                    </div>
+                    <div class="links">
+                        <nav>
+                            <ul>
+                                <li><a class="cor" href="index.html">Home</a></li>
+                                <li><a class="cor" href="projetos.html">Projetos</a></li>
+                                <li><a class="cor" href="imagens.html">Imagens</a></li>
+                                <li><a class="cor" href="quiz.html">Quiz</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </main>
+        </header>
+
+        <main>
+            <div class="box">
+                <div class="quiz-container" id="quiz">
+                    <div class="quiz-header">
+                        <h2 id="question">Question text</h2>
+                        <ul>
+                            <li>
+                                <input
+                                    type="radio"
+                                    id="a"
+                                    name="answer"
+                                    class="answer"
+                                />
+                                <label id="a_text" for="a">Question</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="radio"
+                                    id="b"
+                                    name="answer"
+                                    class="answer"
+                                />
+                                <label id="b_text" for="b">Question</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="radio"
+                                    id="c"
+                                    name="answer"
+                                    class="answer"
+                                />
+                                <label id="c_text" for="c">Question</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="radio"
+                                    id="d"
+                                    name="answer"
+                                    class="answer"
+                                />
+                                <label id="d_text" for="d">Question</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="submit">Próxima</button>
+                </div>
+            </div>
+        </main>
+
+    </body>
+</html>

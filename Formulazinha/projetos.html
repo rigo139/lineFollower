@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css_formulazinha.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto&family=Roboto+Flex:opsz,wght@8..144,300&display=swap"    rel="stylesheet">
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon"/>
+    <title>Formulazinha</title>
+</head>
+<body>
+    <!--Menu superior-->
+    <header class="menu">
+        <main>
+            <div class="header1">
+                <div class="logo">
+                    <img src="./imagens/logo.png" alt="logo">
+                </div>
+                <div class="links">
+                    <nav>
+                        <ul>
+                            <li><a class="cor" href="index.html">Home</a></li>
+                            <li><a class="cor" href="projetos.html">Projetos</a></li>
+                            <li><a class="cor" href="imagens.html">Imagens</a></li>
+                            <li><a class="cor" href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+    </header>
+     <!--Descrição sobre os projetos do PAC-->
+    <div class="conteudo">
+        <main>
+            <h1 class="titulo">Projetos</h1><br><br>
+            <h2 class="titulo">Vídeo sobre robótica</h2><br>
+            <p>Nosso primeiro trabalho da primeira fase do PAC, foi elaborar um vídeo respondendo a seguinte pergunta: Por que robótica na TI?</p><br>
+            <p><strong>O que é robótica?</strong></p>
+            <p>A humanidade sempre pensou em formas de poupar tempo e trabalho, com isso os nossos longínquos antepassados já demonstravam o desejo de automatizar tarefas mecânicas. Exemplo disso são algumas "criaturas realistas" baseadas em mecânismos de relógios que podiam fazer assinaturas, esses dispositivos foram desenvolvidos no século <strong>XVIII</strong> na Europa. A robótica sendo um campo amplo de pesquisa por parte dos cientistas, pode ser um pouco difícil de descrever. Podemos dividir os sistemas robóticos em dois tipos de máquinas, primeiro as teleoperadas, que não são capazes de tomar decisões autônomas, e dependem de instruções externas de seres humanos. E as máquinas que são autônomas, capazes de tomar decisões autonomamente com base em sensores e parâmetros nela programados.</p><br>
+            <p><strong>Por que robótica na TI?</strong></p>
+            <p>Com o avanço da tecnologia, as coisas estão cada vez mais conectadas com a internet, abrindo assim um grande leque de possibilidades, com dispositivos conectados trocando e gerando dados que quando processados cuminam em informação.</p>
+            <p>Com a informação extraída através desses dados, podemos assim tomar decisões muito mais precisas. Agora podemos avaliar padrões em que as métricas antigas não eram capazes de perceber.</p>
+            <p>A era da automatização se da devido a junção entre a robótica e a TI.</p><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8uZxVb6CgqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 class="titulo">Arduino</h2><br>
+            <p>Em nossas aula do PAC estamos aprendendo a fazer circuitos com o Arduino, para posteriormente construírmos nosso próprio robô seguidor de linha, que será o último projeto da 1<sup>a</sup> fase do PAC.</p><br>
+            <p><strong>Mas afinal, o que é um Arduíno?</strong></p><br>
+            <p>Arduino é uma plataforma de prototipagem eletrônica de hardware livre e de placa única, projetada com um microcontrolador Atmel AVR com suporte de entrada/saída embutido, uma linguagem de programação padrão, a qual tem origem em Wiring, e é essencialmente C/C++</p>
+            <p>Até o momento, esses são os projetos que fizemos na plataforma tinkercad:</p>
+            <h4>Semáforo:</h4><br>
+            <figure>
+                <img class="circuito" src="./imagens/Semaforo.png" alt="Semaforo">
+            </figure><br>
+            <p>Esse é um circuito de um semáforo simples, contendo apenas 3 leds e 3 resitores. As luzes piscam em um loop contínuo a cada 1 segundo. Para fazer as luzes piscarem, foi necessário escrever um código em C++.</p><br>
+            <p><strong>Código utilizado:</strong></p>
+            <p class="codigo">void setup(){<br>
+                pinMode(OUTPUT,2);<br>
+                pinMode(OUTPUT,3);<br>
+                pinMode(OUTPUT,4);<br>
+              }<br>
+              <br>
+              void loop(){<br>
+               digitalWrite(4,HIGH);<br>
+               delay(1000);<br>
+               digitalWrite(4,LOW);<br>
+               digitalWrite(3,HIGH);<br>
+               delay(2000);<br>
+               digitalWrite(3,LOW);<br>
+               digitalWrite(2,HIGH);<br>
+               delay(1000);<br>
+               digitalWrite(2,LOW);<br>
+              }</p>
+            <h4>Luz de emergência:</h4><br>
+            <figure>
+                <img class="circuito" src="./imagens/luz-emergencia.png" alt="Luz de emergência">
+            </figure><br>
+            <p>Este é um projeto de sensor de luz de emergência, que acende quando fica sem luminosidade. Para executa-lo foran necessários 1 led, 1 resistor e um sensor LDR.</p><br>
+            <p><strong>Código utilizado:</strong></p>
+            <p class="codigo">int ledvermelha = 13;<br>
+                float LDR = A0;<br>
+                float valorLDR = 0;<br>
+                <br>
+                void setup(){<br>
+                  Serial.begin(9600);<br>
+                  pinMode(13, OUTPUT);<br>
+                  pinMode(LDR, INPUT);<br>
+                }<br>
+                <br>
+                void loop(){<br>
+                  valorLDR = analogRead(LDR);<br>
+            
+                  if (valorLDR <100){<br>
+                    digitalWrite(ledvermelha, HIGH);<br>
+                  }<br>
+                  else{<br>
+                    digitalWrite(ledvermelha, LOW);<br>
+                  }
+            </p>
+            <h4>Motor Simples:</h4><br>
+            <figure>
+                <img class="circuito" src="./imagens/motor-simples.png" alt="Motor simples">
+            </figure><br>
+            <p>Este projeto é de um motor simples que roda para frente e para tras. Foi necessário utilizar 1 motor CC, 1 fonte de energia, 1 potênciometro, 1 motor de ponte H e 1 interruptor deslizante. Conforme mudamos o interruptor deslizante o motor muda a direção em que está rodando.</p><br>
+            <p><strong>Código utilizado:</strong></p>
+            <p class="codigo">#define PIN_IN3 4<br>
+                #define PIN_IN4 2<br>
+                #define PIN_ENB 3<br>
+                #define PIN_POT A0<br>
+                #define PIN_DIR 7<br>
+                #define PIN_ESQ 8<br>
+                <br>
+                void setup(){<br>
+                    pinMode(PIN_IN3,OUTPUT);<br>
+                    pinMode(PIN_IN4,OUTPUT);<br>
+                    pinMode(PIN_ENB,OUTPUT);<br>
+                    pinMode(PIN_DIR,INPUT_PULLUP);<br>
+                    pinMode(PIN_ESQ,INPUT_PULLUP);<br>
+                    Serial.begin(9600);<br>
+                }<br>
+                <br>
+                void loop(){<br>
+                    int dir=digitalRead(PIN_DIR);<br>
+                    int esq=digitalRead(PIN_ESQ);<br>
+                    int valor=analogRead(PIN_POT);<br>
+                    valor=map(valor,0,1023,0,255);<br>
+                    analogWrite(PIN_ENB,valor);<br>
+                    Serial.print("DIREITA=");<br>
+                    Serial.print(dir);<br>
+                    Serial.print(" ESQUERDA=");<br>
+                    Serial.println(esq);<br>
+                    if(dir==1 && esq==0){<br>
+                        digitalWrite(PIN_IN3,HIGH);<br>
+                        digitalWrite(PIN_IN4,LOW);<br>
+                    }<br>
+                    if(dir==0 && esq==1){<br>
+                        digitalWrite(PIN_IN3,LOW);<br>
+                        digitalWrite(PIN_IN4,HIGH);<br>
+                    }<br>
+                    if(dir==1 && esq==1){<br>
+                        digitalWrite(PIN_IN3,LOW);<br>
+                        digitalWrite(PIN_IN4,HIGH);<br>
+                    }<br>
+                }</p>
+            <h4>Motor de seguidor de linha:</h4><br>
+            <figure>
+                <img class="circuito" src="./imagens/motor-seguidor-de-linha.png" alt="Motor seguidor de linha">
+            </figure><br>
+            <p>Este é um protótipo de um motor de robô seguidor de linha, esse motor pode andar para frente e para tras, esquerda e direita e que será nosso último projeto da primeira fase do PAC. Para contruir o circuito foi necessário utilizar dois motores CC, uma bateria de 9V, 6 resistores, 4 fotoresitores, 1 led RGB, 1 motor de ponte H e 1 interruptor deslizante.</p><br>
+            <p><strong>Código utilizado:</strong></p>
+            <p class="codigo">#define IN1 2<br>
+                #define IN2 4<br>
+                #define IN3 7<br>
+                #define IN4 5<br>
+                #define ENA 3<br>
+                #define ENB 6<br>
+                #define LEDR 9<br>
+                #define LEDB 10<br>
+                #define LEDG 11<br>
+                #define S1 A0<br>
+                #define S2 A1<br>
+                #define S3 A2<br>
+                #define S4 A3<br>
+                <br>
+                void setup(){<br>
+                  pinMode(IN1,OUTPUT);<br>
+                  pinMode(IN2,OUTPUT);<br>
+                  pinMode(IN3,OUTPUT);<br>
+                  pinMode(IN4,OUTPUT);<br>
+                  pinMode(ENA,OUTPUT);<br>
+                  pinMode(ENB,OUTPUT);<br>
+                  analogWrite(ENA,255);<br>
+                  analogWrite(ENB,255);<br>
+                  pinMode(LEDR, OUTPUT);<br>
+                  pinMode(LEDB, OUTPUT);<br>
+                  pinMode(LEDG, OUTPUT);<br>
+            
+                  Serial.begin(9600);<br>
+                }<br>
+                <br>
+                void loop(){<br>
+                  int s1, s2, s3, s4;<br>
+            
+                  s1=analogRead(S1);<br>
+                  s2=analogRead(S2);<br>
+                  s3=analogRead(S3);<br>
+                  s4=analogRead(S4);<br>
+            
+                  int luz = 500;<br>
+            
+                  Serial.print(s1);<br>
+                  Serial.print(" ");<br>
+                  Serial.print(s2);<br>
+                  Serial.print(" ");<br>
+                  Serial.print(s3);<br>
+                  Serial.print(" ");<br>
+                  Serial.print(s4);<br>
+                  Serial.print(" ");<br>
+                  <br>
+                  if(s1 < luz && s2 > luz && s3 > luz && s4 < luz){<br>
+                    Serial.println(" Frente ");<br>
+            
+                    digitalWrite(LEDR, LOW);<br>
+                    digitalWrite(LEDG, HIGH);<br>
+                    digitalWrite(LEDB, LOW);<br>
+            
+                    digitalWrite(IN1,HIGH);<br>
+                      digitalWrite(IN2,LOW);<br>
+                      digitalWrite(IN3,LOW);<br>
+                      digitalWrite(IN4,HIGH);<br>
+                  }else if (s1 > luz && s2 < luz && s3 < luz && s4 < luz){<br>
+                    Serial.println(" Direita ");<br>
+            
+                    digitalWrite(LEDR, HIGH);<br>
+                    digitalWrite(LEDG, LOW);<br>
+                    digitalWrite(LEDB, LOW);<br>
+            
+                    digitalWrite(IN1,LOW);<br>
+                    digitalWrite(IN2,HIGH);<br>
+                    digitalWrite(IN3,LOW);<br>
+                    digitalWrite(IN4,HIGH);<br>
+                  }else if (s1 < luz && s2 < luz && s3 < luz && s4 > luz){<br>
+                    Serial.println(" Esquerda ");<br>
+            
+                    digitalWrite(LEDR, HIGH);<br>
+                    digitalWrite(LEDG, LOW);<br>
+                    digitalWrite(LEDB, LOW);<br>
+            
+                    digitalWrite(IN1,HIGH);<br>
+                    digitalWrite(IN2,LOW);<br>
+                    digitalWrite(IN3,HIGH);<br>
+                    digitalWrite(IN4,LOW);<br>
+                  }else{<br>
+                    Serial.println(" off ");<br>
+            
+                    digitalWrite(LEDR, LOW);<br>
+                    digitalWrite(LEDG, LOW);<br>
+                    digitalWrite(LEDB, HIGH);<br>
+            
+            
+                    digitalWrite(IN1,LOW);<br>
+                    digitalWrite(IN2,LOW);<br>
+                    digitalWrite(IN3,LOW);<br>
+                    digitalWrite(IN4,LOW);<br>
+                  }<br>
+                }
+            
+            </p>
+        </main>
+    </div>
+
+</body>
+
+</html>
